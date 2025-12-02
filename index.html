@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lotus Note</title>
+  <title>Lotus Notes</title>
   <style>
     body {
       display: flex;
@@ -11,7 +11,7 @@
       align-items: center;
       height: 100vh;
       margin: 0;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      background: white;
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     }
 
@@ -25,19 +25,18 @@
       font-weight: bold;
       border: none;
       color: white;
-      background: #4f46e5;
+      background: #e63939; /* rouge */
       border-radius: 50px;
       cursor: pointer;
       position: relative;
       overflow: hidden;
-      transition: transform 0.15s ease;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+      transition: transform 0.1s ease;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
     }
 
-    /* Effet de clic */
+    /* Effet de clic (léger) */
     .btn:active {
-      transform: scale(0.92);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      transform: scale(0.95);
     }
 
     /* Vague circulaire au clic */
@@ -64,33 +63,15 @@
         opacity: 0;
       }
     }
-
-    /* Animation de pulsation continue */
-    @keyframes pulse {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.05);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-
-    .pulse {
-      animation: pulse 2s infinite ease-in-out;
-    }
   </style>
 </head>
 <body>
 
   <div class="button-container">
-    <button class="btn pulse">Arrêt Lotus Notes</button>
+    <button class="btn">Arrêt Lotus Notes</button>
   </div>
 
   <script>
-    // Recréer l'effet ripple à chaque clic
     const btn = document.querySelector(".btn");
 
     btn.addEventListener("click", function(e) {
